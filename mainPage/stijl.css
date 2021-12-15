@@ -4,3 +4,37 @@ html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
 /* hier komt jouw css */
+body{
+    background-color: darkred;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#title{
+    height: 50%;
+    align-items: flex-end;
+}
+
+#button{
+    border: black 0.1rem solid;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    background: radial-gradient( darkred 75%, rgb(100, 0, 0) );
+}
+
+#button:hover{
+    background: radial-gradient( darkred 50%, rgb(85, 0, 0) );
+}
+
+#button:active{
+    background: radial-gradient( darkred 30%, rgb(60, 0, 0) );
+}
