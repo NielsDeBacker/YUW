@@ -13,19 +13,17 @@ function createArrayOfPages(){
 }
 
 function getRandomPage(array_pages){
-    alert(array_pages);
     var amountOfPages = array_pages.length;
-    alert(amountOfPages);
-    var randomNumber = Math.floor((Math.random()*amountOfPages) + 1);
+    var randomNumber = Math.floor((Math.random()*amountOfPages));
     var page = array_pages[randomNumber];
     var link = "../"+ page + "/index.html"; 
-    
     return link;
 }
 
 function spliceMainPage(array_Pages){
     var mainPageExists = array_Pages.indexOf('mainPage');
     if (mainPageExists > -1){
-        array_Pages.splice("mainPage", 1);
+        array_Pages.splice(mainPageExists, 1);
     }
+    return array_Pages;
 }
