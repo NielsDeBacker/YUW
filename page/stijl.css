@@ -1,0 +1,84 @@
+/* drie basisstijlregels om je te helpen */
+:root {
+  font-size: 100%; /* zet je dit op 62.5%, dan is elke rem 10px waard, anders 16px */
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hier komt jouw css */
+div {
+  display: grid;
+  width: 99vw;
+  height: 100vh;
+  gap: 1rem;
+  margin: 0vw 0.5vw;
+}
+
+#text {
+  color: red;
+  position: absolute;
+  z-index: 2;
+  top: 50vh;
+  left: 50vw;
+  font-size: 5rem;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.odd {
+  background-image: linear-gradient(transparent 0%, transparent 80%, black 80%);
+  animation-name: odd;
+  animation-duration: 1;
+}
+
+.even {
+  background-image: linear-gradient(
+    black 20%,
+    transparent 20%,
+    transparent 100%
+  );
+}
+
+@keyframes odd {
+  0% {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent 80%,
+      black 80%
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      black 20%,
+      transparent 20%,
+      transparent 100%
+    );
+  }
+}
+
+@keyframes even {
+  0% {
+    background-image: linear-gradient(
+      black 20%,
+      transparent 20%,
+      transparent 100%
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent 80%,
+      black 80%
+    );
+  }
+}
