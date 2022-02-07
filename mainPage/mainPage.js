@@ -7,7 +7,7 @@ function loadPage(){
 }
 
 function createArrayOfPages(){
-    var array_Pages = ["giveUp", "mainPage", "dontMatter"];//get pages
+    var array_Pages = ["giveUp", "mainPage", "dontMatter", "page"];//get pages
     var newArray = spliceMainPage(array_Pages);
     return newArray;
 }
